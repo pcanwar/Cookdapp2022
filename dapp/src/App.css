@@ -1,0 +1,21 @@
+/* main page */
+.main__container {
+  height: 100vh;
+}
+.center__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* test page */
+
+.left__container {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
