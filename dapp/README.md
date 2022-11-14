@@ -193,4 +193,67 @@ Starting migrations...
    > total cost:          0.0017778402289032 ETH
 
 
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.0017778402289032 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Oracle'
+   ------------------
+   > transaction hash:    0xf1455b7ff304f67845429cba336457321fe757932fa6626e7d552f16b8d1ce7b
+   > Blocks: 2            Seconds: 24
+   > contract address:    0x57660d55A962Ee32aF9777E97798EcE80e858b15
+   > block number:        7953666
+   > block timestamp:     1668455484
+   > account:             0x58F79666Ef478ed0FC565B814AcAB5d4F4684DE4
+   > balance:             0.996097646422462312
+   > gas used:            291433 (0x47269)
+   > gas price:           6.244788949 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001819937577773917 ETH
+
+
+   Deploying 'Client'
+   ------------------
+   > transaction hash:    0xf04502b72ce0e1ae3b1c30af6fb1c05d73ad246aad3b9823d456761ad144b31e
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x03A88E8e6e97f916E74E4f9614747BaB396f6F6b
+   > block number:        7953667
+   > block timestamp:     1668455496
+   > account:             0x58F79666Ef478ed0FC565B814AcAB5d4F4684DE4
+   > balance:             0.993625710670717567
+   > gas used:            377949 (0x5c45d)
+   > gas price:           6.540395005 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002471935751744745 ETH
+
+
+   Deploying 'onChain'
+   -------------------
+   > transaction hash:    0xcc589db6bb672502941e4c7496aad21dd55f2532ecfe58a30efd18dffd1b168a
+   > Blocks: 1            Seconds: 8
+   > contract address:    0x11901D900D5D93fd2217aa9Bc2c75f041eC3BFCA
+   > block number:        7953668
+   > block timestamp:     1668455508
+   > account:             0x58F79666Ef478ed0FC565B814AcAB5d4F4684DE4
+   > balance:             0.987373520796685817
+   > gas used:            993359 (0xf284f)
+   > gas price:           6.29398825 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00625218987403175 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.010544063203550412 ETH
+
+Summary
+=======
+    > Total deployments:   4
+    > Final cost:          0.012321903432453612 ETH
+
 ```
