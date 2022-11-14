@@ -24,6 +24,7 @@ export default function TestComponent() {
     // connect to CoinGecko API. 
     const CoinGeckoClient = new CoinGecko();
 
+
     // connect to wallet connect 
     // more info: https://github.com/Web3Modal/web3modal
     const web3Modal = new Web3Modal({
@@ -44,9 +45,10 @@ export default function TestComponent() {
     const [oracleContractInstance, setOracleContractInstance] = useState(null);
     const [onChainContractInstance, setOnChainContractInstance] = useState(null);
     const [priceFeedLable, setPriceFeedLable] = useState(null);
+    const [bitcoinPrice, setBitcoinPrice] = useState(null);
 
     const [currentStatus, setCurrentStatus] = useState('')
-    const [accountInout, setAccountInput] = useState('');
+    // const [accountInout, setAccountInput] = useState('');
     // const [amountInput, setAmountInput] = useState('');
     const [pairAddress, setPairAddress] = useState('');
     const [priceLable, setPriceLable] = useState('');
@@ -141,9 +143,8 @@ export default function TestComponent() {
 
     // now anyone can call the foo func in client contract 
     async function foo() {
-        await clientContractInstance.methods.foo().call().then(res=>{
-                console.log(res)
-        });
+        let res = await clientContractInstance.methods.foo().call()
+        setBitcoinPrice(res)
     }
 
 
@@ -204,11 +205,11 @@ export default function TestComponent() {
                 <br></br>
                 <label> 
                     Allow an account to update the price (coingecko API) <br></br>
-                <button onClick={() => setAccount(accountInout)}>  Enter account 
-                </button>
+                 {/* <button onClick={() => setAccount(accountInout)}>  Enter account 
+                </button> 
                     : <input type="text" size="50"
                     onChange={event => setAccountInput(event.target.value)}>
-                    </input>
+                    </input> */}
                       
                 </label>
                 </p>
@@ -234,11 +235,10 @@ export default function TestComponent() {
             <div>
             <p>
                 <br></br>
-                <label> 
                 <button onClick={() => foo()}>  foo : 
                 </button>
-                 
-           
+                <label> 
+                 {bitcoinPrice}
                 </label>
                 </p>
 

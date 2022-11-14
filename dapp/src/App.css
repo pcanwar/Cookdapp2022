@@ -1,6 +1,7 @@
 /* main page */
 .main__container {
   height: 100vh;
+  padding: 0 20px;
 }
 .center__container {
   height: 100%;
