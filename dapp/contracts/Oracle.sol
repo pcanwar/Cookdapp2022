@@ -11,8 +11,9 @@ struct Data {
 
   address public admin;
 
-  mapping(address => bool) public reporters;
-  mapping(bytes32 => Data) public data; // mapping the struct, so we get from each key a different result
+  // mapping(address => bool) public reporters;
+  mapping(bytes32 => Data) public data; // mapping the struct,
+  // so we get from each key a different result
 
 
   // admain of this contract
@@ -22,15 +23,15 @@ struct Data {
 
 
   // first the admin needs to add a reporter to update the price
-  function updateReporter(address reporter, bool isReporter) external {
-    require(msg.sender == admin, 'only admin');
-    reporters[reporter] = isReporter;
-  }
+  // function updateReporter(address reporter, bool isReporter) external {
+  //   // require(msg.sender == admin, 'only admin');
+  //   reporters[reporter] = isReporter;
+  // }
 
 
   // only reporter can run updateData function to update a price 
   function updateData(bytes32 key, uint payload) external {
-    require(reporters[msg.sender] == true, 'only reporters');
+    // require(reporters[msg.sender] == true, 'only reporters');
     data[key] = Data(block.timestamp, payload);
   }
 

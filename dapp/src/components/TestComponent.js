@@ -24,7 +24,6 @@ export default function TestComponent() {
     // connect to CoinGecko API. 
     const CoinGeckoClient = new CoinGecko();
 
-
     // connect to wallet connect 
     // more info: https://github.com/Web3Modal/web3modal
     const web3Modal = new Web3Modal({

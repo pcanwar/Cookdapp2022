@@ -106,6 +106,11 @@ module.exports = {
         new HDWalletProvider(key, `https://rinkeby.infura.io/v3/${inf}`),
         network_id: 4,
       },
+      goerli: { //  https://goerli.infura.io/v3/99ecffb8a1e84dfbb8c3a70abc8e4441
+        provider: () => 
+        new HDWalletProvider(key, `https://goerli.infura.io/v3/${inf}`),
+        network_id: 5,
+      },
   },
 
   // Set default mocha options here, use special reporters etc.

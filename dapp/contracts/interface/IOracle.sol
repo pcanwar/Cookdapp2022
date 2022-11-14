@@ -10,9 +10,6 @@ interface IOracle {
     // 2nd
     function toUSD() external view returns(uint );
     function getUSDPrice(uint _price) external view returns(uint);
-    function getETHPrice(uint _price) external view returns(uint);
-
-    // 3rd
-    
+    function getETHPrice(uint _price) external view returns(uint);    
 
 }

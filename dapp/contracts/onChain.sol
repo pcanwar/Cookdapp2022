@@ -6,8 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 
 // https://docs.chain.link/docs/ethereum-addresses/
-// https://docs.chain.link/docs/ethereum-addresses/#Rinkeby%20Testnet
-
+// https://docs.chain.link/docs/data-feeds/price-feeds/addresses/?network=ethereum#Goerli%20Testnet
 // in this contract exmaple, there are two interfaces to get the price of two tokens pair
 // for example ETH to USDC 
 // 1- chainlink : AggregatorV3Interface file and we only use latestRoundData function 
@@ -33,7 +32,8 @@ contract onChain is Ownable {
         // pair is to keep the address of the pair address that have two tokens
         pair = IUniswapV2Pair(_pairAddress);
         // usdETHPriceFeed is chainlink pair of two tokens  
-        usdETHPriceFeed = AggregatorV3Interface(0x8A753747A1Fa494EC906cE90E9f37563A8AF630e); // from chainlink feed price site.
+        usdETHPriceFeed = AggregatorV3Interface(0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e); // from chainlink feed price site.
+        // https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol
     }
 
     // getEthPriceFeed from chainlink pair address using the function latestRoundData in the interface . 
