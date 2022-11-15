@@ -1,14 +1,16 @@
 #  Project
-```sh
+
 Install Node.js https://nodejs.org/en/
-```
-In dapp dir there is a simple example. In this example, there are three smart contracts. 
+
+
+
+## In dapp dir 
+There is a simple example. In this example, there are three smart contracts. 
 - Oracle and client contracts work together and read API data.
 - onChain contract reads data from a different contract (Chainlink) using the interface of chainlink to get the price of ETH.
 
 
 ```sh
- 
  npm i
 ```
 to install all packages then run
