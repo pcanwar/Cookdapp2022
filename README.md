@@ -1,21 +1,36 @@
 #  Project
 ```sh
 Install Node.js https://nodejs.org/en/
-Create a new dirctory and set up a new npm package. 
-Initiate a new npm package: npm init
+```
+In dapp dir there is a simple example. In this example, there are three smart contracts. 
+- Oracle and client contracts work together and read API data.
+- onChain contract reads data from a different contract (Chainlink) using the interface of chainlink to get the price of ETH.
 
 
-Install truffle  https://www.trufflesuite.com/
-Create an empty truffle/ethereum project: tuffle init . 
+```sh
+ 
+ npm i
+```
+to install all packages then run
+```sh
+npm start
+```
+
+
+
+truffle  https://www.trufflesuite.com/
+Create an empty truffle/ethereum project: 
+```sh 
+tuffle init 
+```
+
 Configure the project network and solidity version in truffle-config.js file
 
-Install coingecko API https://www.npmjs.com/package/coingecko-api
-Start truffle develop
+if you want to install coingecko API
+
+https://www.npmjs.com/package/coingecko-api
 
 
-Compile and deploy the smart contracts
-Run an external script
-```
 
 
 # hardhat 
