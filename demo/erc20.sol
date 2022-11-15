@@ -8,7 +8,6 @@ contract ERC20 {
     string private _name;
     string private _symbol;
 
-
         /**
      * @dev Emitted when `value` tokens are moved from one account (`from`) to
      * another (`to`).
