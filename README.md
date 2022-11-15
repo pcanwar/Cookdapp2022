@@ -1,19 +1,28 @@
-# Basic Sample Hardhat Project
+#  Project
 ```sh
 Install Node.js https://nodejs.org/en/
+Create a new dirctory and set up a new npm package. 
+Initiate a new npm package: npm init
+
+
 Install truffle  https://www.trufflesuite.com/
 Create an empty truffle/ethereum project: tuffle init . 
 Configure the project network and solidity version in truffle-config.js file
-Initiate a new npm package
+
 Install coingecko API https://www.npmjs.com/package/coingecko-api
 Start truffle develop
+
+
 Compile and deploy the smart contracts
 Run an external script
 ```
 
 
 # hardhat 
+
 ```shell
+
+
 npx hardhat accounts
 npx hardhat compile
 npx hardhat clean

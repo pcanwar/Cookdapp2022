@@ -54,14 +54,19 @@ contract Support {
      */
     function send( IERC20 _contract, address to, uint sendAmount ) public supported( _contract) {
         // require()
-        // sell NFT/ create bool / etc
-        // do something ... 
+        // sell NFT/ create bool / etc / or do something ... 
+        uint256 fee = calculatedFee(sendAmount);
         IERC20 token = IERC20(_contract);
-        token.safeApprove(address(this), sendAmount);
-        token.safeTransferFrom(msg.sender, address(this), sendAmount);
-        token.safeTransferFrom(address(this), to, sendAmount);
+        IERC20(_contract).safeTransferFrom(msg.sender, address(this), fee);
+        token.safeTransferFrom(msg.sender, to, sendAmount - fee);
         
-
     }
+    
+    function calculatedFee(uint256 _amount) public pure returns(uint fee) {
+        uint _txfee = 200; // 2%
+        uint callItFee = _amount * _txfee;
+        fee = callItFee / 1e4; 
+    }
+
 
 }

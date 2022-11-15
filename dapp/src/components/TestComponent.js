@@ -96,7 +96,6 @@ export default function TestComponent() {
         );
         setClientContractInstance(clientContractInstance);
         
-        
         // connect to the onChain contract
         const deployedonChain = onChain.networks[networkID];
         const onChainContractInstance = new web3.eth.Contract(
@@ -119,9 +118,9 @@ export default function TestComponent() {
 
     // call updateReporter function from the oracle contract
     // to give a permission for an X address to update the price
-    async function setAccount(accountInout) { 
-        await oracleContractInstance.methods.updateReporter(accountInout, true).send({from: accounts[0]} );
-    }
+    // async function setAccount(accountInout) { 
+    //     await oracleContractInstance.methods.updateReporter(accountInout, true).send({from: accounts[0]} );
+    // }
 
     // the  X address then can call the API to updateData in the oracle contrac
     async function updateData () {
@@ -243,45 +242,7 @@ export default function TestComponent() {
                 </p>
 
             </div>
-
-
-            <div>
-            <hr></hr>
-            <p>
-                <br></br>
-                <label> 
-                <button onClick={() => setPairAddresses(pairAddress)}>  Set Pair  : 
-                </button>
-                    <input type="text" size="50"
-                    onChange={event => setPairAddress(event.target.value)}>
-                    </input>
-                      
-                </label>
-                </p>
-                
-
-            </div>
-
-            <div>
-            <p>
-            From sushiswap smart contract :
-                <br></br>
-                <label> 
-                <button onClick={() => getPrice(checkPirce)}>  The Price :
-                </button> 
-                <input type="text" pattern="[0-9]*" 
-                    onChange={event => setCheckPirce(event.target.value)}>
-                </input>
-                     is: {priceLable} USD.
-                    
-                </label>
-            </p>
-            <label>  </label>
-
-
-            </div>
-
-
+             
             <div>
             <p>
                 <br></br>
