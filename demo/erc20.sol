@@ -64,7 +64,7 @@ contract ERC20 {
      * no way affects any of the arithmetic of the contract, including
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
-    function decimals() public view   returns (uint8) {
+    function decimals() public pure   returns (uint8) {
         return 18;
     }
 
