@@ -39,7 +39,7 @@ contract ERC20 {
     /**
      * @dev Returns the name of the token.
      */
-    function name() public view virtual returns (string memory) {
+    function name() public view  returns (string memory) {
         return _name;
     }
 
@@ -47,7 +47,7 @@ contract ERC20 {
      * @dev Returns the symbol of the token, usually a shorter version of the
      * name.
      */
-    function symbol() public view virtual  returns (string memory) {
+    function symbol() public view   returns (string memory) {
         return _symbol;
     }
 
@@ -64,14 +64,14 @@ contract ERC20 {
      * no way affects any of the arithmetic of the contract, including
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
-    function decimals() public view virtual  returns (uint8) {
+    function decimals() public view   returns (uint8) {
         return 18;
     }
 
     /**
      * @dev See {IERC20-totalSupply}.
      */
-    function totalSupply() public view virtual  returns (uint256) {
+    function totalSupply() public view   returns (uint256) {
         return _totalSupply;
     }
 
@@ -190,7 +190,7 @@ contract ERC20 {
      *
      * - `account` cannot be the zero address.
      */
-    function _mint(address account, uint256 amount) public virtual {
+    function _mint(address account, uint256 amount) public  {
         require(account != address(0), "ERC20: mint to the zero address");
 
 
@@ -214,7 +214,7 @@ contract ERC20 {
      * - `account` cannot be the zero address.
      * - `account` must have at least `amount` tokens.
      */
-    function _burn(address account, uint256 amount) internal virtual {
+    function _burn(address account, uint256 amount) public  {
         require(account != address(0), "ERC20: burn from the zero address");
 
 
@@ -247,7 +247,7 @@ contract ERC20 {
         address owner,
         address spender,
         uint256 amount
-    ) internal virtual {
+    ) internal  {
         require(owner != address(0), "ERC20: approve from the zero address");
         require(spender != address(0), "ERC20: approve to the zero address");
 
