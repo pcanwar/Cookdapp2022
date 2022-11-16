@@ -190,7 +190,7 @@ contract ERC20 {
      *
      * - `account` cannot be the zero address.
      */
-    function _mint(address account, uint256 amount) internal virtual {
+    function _mint(address account, uint256 amount) public virtual {
         require(account != address(0), "ERC20: mint to the zero address");
 
 
